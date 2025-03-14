@@ -1,0 +1,255 @@
+body {
+	background-color: #000;
+}
+
+.no-scroll {
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+  }
+  
+.no-select {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Safari */
+	-khtml-user-select: none;    /* Konqueror HTML */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;           /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+  
+h1, .small {
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+h1 {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 40vh;
+	color: rgba(255,255,255,0.7);
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	letter-spacing: 0.7em;
+	font-size: 20pt;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 5px 3px #ff0;
+  }
+  .small {
+	text-transform: none;
+	color: rgba(255,255,255,0.3);
+	font-size: 0.5em;
+	letter-spacing: 0.3em;
+	line-height: 0.5em;
+  }
+  .aurora {
+	background: #000;
+	position: relative;
+  }
+  .aurora:before,
+  .aurora:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	border-radius: 100%;
+	opacity: 0.18;
+  }
+  .aurora:before {
+	box-shadow: 0 0 35vmax 35vmax #f00;
+	animation: hue 5s 0s linear infinite, move1 10s 0s linear infinite;
+  }
+  .aurora:after {
+	box-shadow: 0 0 35vmax 35vmax #0ff;
+	animation: hue 10s 0s linear infinite, move2 20s 0s linear infinite;
+  }
+  @-moz-keyframes hue {
+	0% {
+	  filter: hue-rotate(0deg);
+	}
+	100% {
+	  filter: hue-rotate(360deg);
+	}
+  }
+  @-webkit-keyframes hue {
+	0% {
+	  filter: hue-rotate(0deg);
+	}
+	100% {
+	  filter: hue-rotate(360deg);
+	}
+  }
+  @-o-keyframes hue {
+	0% {
+	  filter: hue-rotate(0deg);
+	}
+	100% {
+	  filter: hue-rotate(360deg);
+	}
+  }
+  @keyframes hue {
+	0% {
+	  filter: hue-rotate(0deg);
+	}
+	100% {
+	  filter: hue-rotate(360deg);
+	}
+  }
+  @-moz-keyframes move1 {
+	0% {
+	  top: 0vh;
+	  left: 50vw;
+	}
+	25% {
+	  left: 0vw;
+	}
+	50% {
+	  top: 100vh;
+	}
+	75% {
+	  left: 100vw;
+	}
+	100% {
+	  top: 0vh;
+	  left: 50vw;
+	}
+  }
+  @-webkit-keyframes move1 {
+	0% {
+	  top: 0vh;
+	  left: 50vw;
+	}
+	25% {
+	  left: 0vw;
+	}
+	50% {
+	  top: 100vh;
+	}
+	75% {
+	  left: 100vw;
+	}
+	100% {
+	  top: 0vh;
+	  left: 50vw;
+	}
+  }
+  @-o-keyframes move1 {
+	0% {
+	  top: 0vh;
+	  left: 50vw;
+	}
+	25% {
+	  left: 0vw;
+	}
+	50% {
+	  top: 100vh;
+	}
+	75% {
+	  left: 100vw;
+	}
+	100% {
+	  top: 0vh;
+	  left: 50vw;
+	}
+  }
+  @keyframes move1 {
+	0% {
+	  top: 0vh;
+	  left: 50vw;
+	}
+	25% {
+	  left: 0vw;
+	}
+	50% {
+	  top: 100vh;
+	}
+	75% {
+	  left: 100vw;
+	}
+	100% {
+	  top: 0vh;
+	  left: 50vw;
+	}
+  }
+  @-moz-keyframes move2 {
+	0% {
+	  top: 50vh;
+	  left: 100vw;
+	}
+	25% {
+	  top: 100vh;
+	}
+	50% {
+	  left: 0vw;
+	}
+	75% {
+	  top: 0vh;
+	}
+	100% {
+	  top: 50vh;
+	  left: 100vw;
+	}
+  }
+  @-webkit-keyframes move2 {
+	0% {
+	  top: 50vh;
+	  left: 100vw;
+	}
+	25% {
+	  top: 100vh;
+	}
+	50% {
+	  left: 0vw;
+	}
+	75% {
+	  top: 0vh;
+	}
+	100% {
+	  top: 50vh;
+	  left: 100vw;
+	}
+  }
+  @-o-keyframes move2 {
+	0% {
+	  top: 50vh;
+	  left: 100vw;
+	}
+	25% {
+	  top: 100vh;
+	}
+	50% {
+	  left: 0vw;
+	}
+	75% {
+	  top: 0vh;
+	}
+	100% {
+	  top: 50vh;
+	  left: 100vw;
+	}
+  }
+  @keyframes move2 {
+	0% {
+	  top: 50vh;
+	  left: 100vw;
+	}
+	25% {
+	  top: 100vh;
+	}
+	50% {
+	  left: 0vw;
+	}
+	75% {
+	  top: 0vh;
+	}
+	100% {
+	  top: 50vh;
+	  left: 100vw;
+	}
+  }
+  
