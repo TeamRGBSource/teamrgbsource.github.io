@@ -25,10 +25,16 @@
 }
   
 .nav-logo {
-    color: white;
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 8px;
     font-size: 1.5rem;
-    font-weight: bold;
-    user-select: none;
+    color: white;
+}
+
+.nav-logo img {
+    display: inline-block;
+    vertical-align: bottom;
 }
   
 .nav-links {
