@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portal Plus</title>
-  <link rel="stylesheet" href="css/fonts.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="shortcut icon" href="img/favicon.webp">
@@ -15,25 +14,66 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="nav-content">
-          <span class="nav-logo">
-            <img src="img/favicon.webp" width="30px" />
-            Portal Plus
-          </span>
-          <ul class="nav-links">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Source Code</a></li>
-          </ul>
-        </div>
+      <div class="nav-content">
+        <span class="nav-logo">
+          <img src="img/favicon.webp" width="30px" />
+          Portal Plus
+        </span>
+        <button class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+      </div>
     </nav>
     <div class="background" id="background"></div>
     <div class="overlay"></div>
     <div class="container">
-        <div class="content">
+      <div class="pages">
+        <section id="home" class="page active">
+          <div class="content">
             <img src="img/PortalPlusLogoNoDropShadow.webp" alt="Logo" class="logo" />
             <p class="coming-soon">Coming soon...</p>
-        </div>
+          </div>
+        </section>
+      
+        <section id="about" class="page">
+          <div class="about-content">
+            <h2><strong>What is <span class="highlight">Portal Plus?</span></strong></h2>
+            <p>
+              Portal Plus is a modernized Portal experience, built on the latest Source Engine SDK, utilizing the updated TF2 multiplayer branch. 
+              It features an updated UI, enhanced visuals, numerous bug fixes, and a plethora of brand-new features.
+            </p>
+            <p>
+              Our base, RGBSource, is a custom branch of the 2013 Source SDK, which has been heavily modified to support enhanced PBR materials, feature many quality-of-life improvements, and provide a more stable, enjoyable, and <span class="customizable">customizable </span>experience.
+            </p>
+          </div>
+        </section>
+      
+        <section id="gallery" class="page">
+          <div class="gallery-content">
+            <h2>Gallery</h2>
+            <p>Check out some previews of Portal Plus:</p>
+            
+            <div class="gallery-grid">
+              <div class="gallery-item">
+                <img src="img/gallery/Shaders.webp" alt="Portal Plus Shaders" class="gallery-image" />
+                <p class="image-caption">Enhanced shaders (heavily WIP, subject to change)</p>
+              </div>
+              
+              <div class="gallery-item">
+                <img src="img/gallery/UI.webp" alt="Portal Plus UI" class="gallery-image" />
+                <p class="image-caption">Modernized UI (heavily WIP, subject to change)</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>
