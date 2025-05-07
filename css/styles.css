@@ -1,14 +1,23 @@
 body {
 	background-color: #000;
+	margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden !important;
+    width: 100vw; /* Ensure body takes up full width */
+	position: relative;
+	max-width: 100vw;
 }
 
 .no-scroll {
-	overflow: hidden;
+	overflow-x: hidden !important;
 	height: 100vh;
 	width: 100vw;
 	margin: 0;
 	padding: 0;
-	position: fixed;
+	/* position: fixed; */
   }
   
 .no-select {
@@ -26,32 +35,58 @@ h1, .small {
 	cursor: default;
 }
 
+#gradient-canvas {
+	width: 100vw !important;
+	max-width: 100vw !important;
+}
+
 h1 {
-	position: absolute;
-	width: 100%;
-	text-align: center;
-	top: 40vh;
-	color: rgba(255,255,255,0.7);
-	font-family: 'Trebuchet MS', Helvetica, sans-serif;
-	letter-spacing: 0.7em;
-	font-size: 20pt;
-	font-weight: normal;
-	text-transform: uppercase;
-	text-shadow: 1px 1px 5px 3px #ff0;
+    position: relative;
+    width: 100vw;
+    text-align: center;
+    padding-top: 40vh;
+    margin-bottom: 40vh;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.7em;
+    font-size: 20pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px 3px #ff0;
+    z-index: 1;
+    transition: opacity 0.1s ease;
+    padding-left: 0.7em; /* Offset for letter-spacing to keep it centered */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+@media (max-width: 768px) {
+	h1 {
+	  letter-spacing: 0.5em; /* Less letter spacing on mobile */
+	  padding-left: 0.5em; /* Adjust padding to match letter spacing */
+	}
   }
-  .small {
+  
+  /* Fix for very small screens */
+  @media (max-width: 480px) {
+	h1 {
+	  letter-spacing: 0.4em;
+	  padding-left: 0.4em;
+	}
+  }
+
+.small {
 	text-transform: none;
 	color: rgba(255,255,255,0.3);
 	font-size: 0.5em;
 	letter-spacing: 0.3em;
 	line-height: 0.5em;
-  }
-  .aurora {
+}
+
+.aurora {
 	background: #000;
 	position: relative;
-  }
-  .aurora:before,
-  .aurora:after {
+}
+.aurora:before,
+.aurora:after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -59,48 +94,49 @@ h1 {
 	height: 1px;
 	border-radius: 100%;
 	opacity: 0.18;
-  }
-  .aurora:before {
+}
+.aurora:before {
 	box-shadow: 0 0 35vmax 35vmax #f00;
 	animation: hue 5s 0s linear infinite, move1 10s 0s linear infinite;
-  }
-  .aurora:after {
+}
+.aurora:after {
 	box-shadow: 0 0 35vmax 35vmax #0ff;
 	animation: hue 10s 0s linear infinite, move2 20s 0s linear infinite;
-  }
-  @-moz-keyframes hue {
+}
+
+@-moz-keyframes hue {
 	0% {
 	  filter: hue-rotate(0deg);
 	}
 	100% {
 	  filter: hue-rotate(360deg);
 	}
-  }
-  @-webkit-keyframes hue {
+}
+@-webkit-keyframes hue {
 	0% {
 	  filter: hue-rotate(0deg);
 	}
 	100% {
 	  filter: hue-rotate(360deg);
 	}
-  }
-  @-o-keyframes hue {
+}
+@-o-keyframes hue {
 	0% {
 	  filter: hue-rotate(0deg);
 	}
 	100% {
 	  filter: hue-rotate(360deg);
 	}
-  }
-  @keyframes hue {
+}
+@keyframes hue {
 	0% {
 	  filter: hue-rotate(0deg);
 	}
 	100% {
 	  filter: hue-rotate(360deg);
 	}
-  }
-  @-moz-keyframes move1 {
+}
+@-moz-keyframes move1 {
 	0% {
 	  top: 0vh;
 	  left: 50vw;
@@ -118,8 +154,8 @@ h1 {
 	  top: 0vh;
 	  left: 50vw;
 	}
-  }
-  @-webkit-keyframes move1 {
+}
+@-webkit-keyframes move1 {
 	0% {
 	  top: 0vh;
 	  left: 50vw;
@@ -137,8 +173,8 @@ h1 {
 	  top: 0vh;
 	  left: 50vw;
 	}
-  }
-  @-o-keyframes move1 {
+}
+@-o-keyframes move1 {
 	0% {
 	  top: 0vh;
 	  left: 50vw;
@@ -156,8 +192,8 @@ h1 {
 	  top: 0vh;
 	  left: 50vw;
 	}
-  }
-  @keyframes move1 {
+}
+@keyframes move1 {
 	0% {
 	  top: 0vh;
 	  left: 50vw;
@@ -175,8 +211,8 @@ h1 {
 	  top: 0vh;
 	  left: 50vw;
 	}
-  }
-  @-moz-keyframes move2 {
+}
+@-moz-keyframes move2 {
 	0% {
 	  top: 50vh;
 	  left: 100vw;
@@ -194,8 +230,8 @@ h1 {
 	  top: 50vh;
 	  left: 100vw;
 	}
-  }
-  @-webkit-keyframes move2 {
+}
+@-webkit-keyframes move2 {
 	0% {
 	  top: 50vh;
 	  left: 100vw;
@@ -213,8 +249,8 @@ h1 {
 	  top: 50vh;
 	  left: 100vw;
 	}
-  }
-  @-o-keyframes move2 {
+}
+@-o-keyframes move2 {
 	0% {
 	  top: 50vh;
 	  left: 100vw;
@@ -232,8 +268,8 @@ h1 {
 	  top: 50vh;
 	  left: 100vw;
 	}
-  }
-  @keyframes move2 {
+}
+@keyframes move2 {
 	0% {
 	  top: 50vh;
 	  left: 100vw;
@@ -251,5 +287,5 @@ h1 {
 	  top: 50vh;
 	  left: 100vw;
 	}
-  }
+}
   

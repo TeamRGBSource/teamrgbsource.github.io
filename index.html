@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Favicons -->
 	<link rel="shortcut icon" href="/img/favicon.webp">
 	<link rel="apple-touch-icon" href="/img/icon.webp">
 	<link rel="icon" type="image/webp" sizes="180x180" href="/img/icon.webp">
@@ -12,17 +11,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/projects.css">
     <link rel="stylesheet" href="/css/gradient.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 
 <body class="no-scroll no-select">
     <canvas id="gradient-canvas"></canvas>
+
     <h1>
       rgbSource
       <br>
       <br>
-      <i class="small">coming soon.</i>
+      <!-- <i class="small">coming soon.</i> -->
     </h1>
+
+    <section class="projects-section">
+        <h2><span class="projects-text">Our Projects</span> <span class="down-arrow">🡻</span></h2>
+        <div class="project-cards">
+          <a href="/portal-plus" class="project-card">
+            <div class="card-content">
+              <h3><img src="/portal-plus/img/favicon.webp" width="48px" />
+                Portal Plus</h3>
+              <p>An enhanced version of Valve's Portal, updated to the latest version of the Source Engine.</p>
+              <span class="card-arrow">🡺</span>
+            </div>
+          </a>
+        </div>
+    </section>
+
     <script src="/js/gradient.js"></script>
+    <script src="/js/fade.js"></script>
 </body>

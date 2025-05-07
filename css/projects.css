@@ -1,0 +1,123 @@
+.projects-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    z-index: 10;
+    position: relative;
+    padding-bottom: 20rem;
+  }
+  
+  .projects-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects-text {
+    transition: margin 0.3s ease;
+    position: relative;
+  }
+  
+  .project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .project-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 360px;
+    height: 240px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.1s ease !important;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: space-between; /* Space items evenly */
+  }
+  
+  .card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .card-content h3 img {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  .card-content p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    overflow: hidden;
+  }
+  
+  .card-arrow {
+    font-size: 1.5rem;
+    align-self: flex-end;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin-top: auto;
+  }
+  
+  .project-card:hover .card-arrow {
+    transform: scale(1.1);
+    transform: translateX(5px);
+  }
+  
+  @media (max-width: 768px) {
+    .project-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .project-card {
+      width: 90%;
+      max-width: 400px;
+    }
+  }
+
+  .down-arrow {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+    animation: bounce 1.5s infinite;
+    position: relative;
+    top: -3px;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
