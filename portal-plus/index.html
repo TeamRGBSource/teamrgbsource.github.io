@@ -6,6 +6,7 @@
   <title>Portal Plus</title>
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/embeds.css" />
   <link rel="shortcut icon" href="img/favicon.webp">
 	<link rel="apple-touch-icon" href="img/icon.webp">
 	<link rel="icon" type="image/webp" sizes="180x180" href="img/icon.webp">
@@ -13,6 +14,11 @@
   <link rel="icon" type="image/webp" href="img/favicon.webp">
 </head>
 <body>
+  <div class="gallery-modal">
+      <span class="modal-close">&times;</span>
+      <img class="modal-content" id="enlarged-image">
+    </div>
+
     <nav class="navbar">
       <div class="nav-content">
         <span class="nav-logo">
@@ -34,11 +40,17 @@
     <div class="background" id="background"></div>
     <div class="overlay"></div>
     <div class="container">
+      
+
       <div class="pages">
         <section id="home" class="page active">
           <div class="content">
             <img src="img/PortalPlusLogoNoDropShadow.webp" alt="Logo" class="logo" />
             <p class="coming-soon">Coming soon...</p>
+            <!-- <a href="https://www.moddb.com/mods/portal">Check it out on ModDB!</a> -->
+            <div class="moddb-container">
+              <iframe width="600" height="180" src="https://www.moddb.com/mods/portal/widget" frameborder="0"></iframe>
+            </div>
           </div>
         </section>
       
@@ -69,6 +81,31 @@
               <div class="gallery-item">
                 <img src="img/gallery/UI.webp" alt="Portal Plus UI" class="gallery-image" />
                 <p class="image-caption">Modernized UI (heavily WIP, subject to change)</p>
+              </div>
+
+              <div class="gallery-item">
+                <img src="https://media.moddb.com/images/mods/1/68/67002/new_wakeup.png" alt="Portal Plus Custom Campaign" class="gallery-image" />
+                <p class="image-caption">A preview of the wakeup section of Portal Plus's custom campaign. You can also see a little bit of our new PBR materials on that table in the corner!</p>
+              </div>
+
+              <div class="gallery-item">
+                <img src="https://media.moddb.com/images/mods/1/68/67002/new_test0.png" alt="Portal Plus Custom Campaign 2" class="gallery-image" />
+                <p class="image-caption">A preview of the first simple chamber in the custom campaign.</p>
+              </div>
+
+              <div class="gallery-item">
+                <img src="https://media.moddb.com/images/mods/1/68/67002/new_lazer.png" alt="Portal Plus Lazer + PBR" class="gallery-image" />
+                <p class="image-caption">Our implementation of Portal 2's lazer... also look at the shines on that metal wall!</p>
+              </div>
+
+              <div class="gallery-item">
+                <img src="https://media.moddb.com/images/mods/1/68/67002/new_fizzler.png" alt="Portal Plus Lazer + PBR" class="gallery-image" />
+                <p class="image-caption">Our custom implementation of Portal 2's fizzler shader, heavily modified to fit our own style of course.</p>
+              </div>
+
+              <div class="gallery-item">
+                <img src="https://media.moddb.com/images/mods/1/68/67002/new_co-op.png" alt="Portal Plus Co-op" class="gallery-image" />
+                <p class="image-caption">Portal Plus will feature the entire Portal 1 campaign, revamped with PBR materials, as well as its own singleplayyer experience. We're also working on adding a cooperative mode as well. (Not to be mistaken with Wonderland_War's Portal: Cooperative).</p>
               </div>
             </div>
           </div>

@@ -43,3 +43,50 @@ navLinksButton.forEach(link => {
     navLinks.classList.remove('show');
   });
 });
+
+
+
+
+//  gallery page
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.querySelector('.gallery-modal');
+    const modalImg = document.getElementById('enlarged-image');
+    const closeBtn = document.querySelector('.modal-close');
+    
+    // Open modal when clicking on gallery items
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', function() {
+            // Use flex display to center content
+            modal.style.display = "flex";
+            modalImg.src = this.querySelector('img').src;
+            
+            // Prevent body scrolling when modal is open
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close modal
+    closeBtn.addEventListener('click', function() {
+        closeModal();
+    });
+    
+    // Also close when clicking outside the image
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Close on ESC key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+    
+    // Function to close modal
+    function closeModal() {
+        modal.style.display = "none";
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+});

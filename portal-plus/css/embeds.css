@@ -1,0 +1,6 @@
+iframe[src*="moddb.com"] {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 40px 0;
+}
